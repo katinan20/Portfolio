@@ -17,6 +17,7 @@ const Portfolio = () => {
   const projects = [
     {
       title: "Application de Génération de Bulletins de Paie",
+      link: "https://github.com/katinan20/front-atlantis-paie",
       description: "Automatisation complète du processus de paie avec interface intuitive",
       tech: ["Spring Boot", "React", "PostgreSQL"],
       category: "Full Stack",
@@ -24,13 +25,15 @@ const Portfolio = () => {
     },
     {
       title: "Application de Gestion Médicale",
+      /*link: "",*/
       description: "Interface moderne pour la gestion des dossiers patients",
       tech: ["React", "Tailwind CSS"],
-      category: "Frontend",
+      category: "Full Stack",
       year: "2024-2025"
     },
     {
       title: "Système de Notifications en Temps Réel",
+      link: "https://github.com/katinan20/front-notification",
       description: "Architecture scalable et performante pour notifications",
       tech: ["Java", "Spring Boot", "React"],
       category: "Full Stack",
@@ -38,6 +41,7 @@ const Portfolio = () => {
     },
     {
       title: "ATLANTIS-LCBFT",
+     /* link: "",*/
       description: "Application de conformité réglementaire contre le blanchiment",
       tech: ["Java", "Angular", "PostgreSQL"],
       category: "Full Stack",
@@ -45,6 +49,7 @@ const Portfolio = () => {
     },
     {
       title: "API Flot - Location de Véhicules Électriques",
+      link: "https://github.com/Flot-Africa/api-core/tree/katinan-test-develop",
       description: "API complète avec intégration de services tiers",
       tech: ["Spring Boot", "MySQL", "Danaya", "Minio", "Fineract"],
       category: "Backend",
@@ -52,11 +57,24 @@ const Portfolio = () => {
     },
     {
       title: "Application de Gestion de Bibliothèque",
+     /* link: "",*/
       description: "Système complet de gestion des livres et emprunts",
       tech: ["Java", "JavaFX", "MySQL"],
       category: "Desktop",
       year: "2023-2024"
+    },
+
+    {
+      title: "Groupe Prosuma",
+      link: "https://groupeprosuma.com",
+      description: "Acteur majeur de la grande distribution en Côte d’Ivoire, gérant supermarchés, hypermarchés et centres commerciaux.",
+      tech: ["Gestion de point de vente", "Logistique", "Supply Chain"],
+      category: "Backend/Maintenace",
+      year: "2024-2025"
     }
+
+
+
   ];
 
   const skills = {
@@ -250,8 +268,15 @@ const Portfolio = () => {
               {projects.map((project, index) => (
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-purple-500/20 hover:border-purple-500/50 transition-all hover:transform hover:scale-105">
                     <div className="flex justify-between items-start mb-4">
+                      <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xl font-semibold text-purple-400 hover:underline flex items-center gap-1"
+                      >
                       <h3 className="text-xl font-semibold text-purple-400">{project.title}</h3>
                       <ExternalLink className="w-5 h-5 text-gray-400" />
+                      </a>
                     </div>
                     <p className="text-gray-300 mb-4 text-sm">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
